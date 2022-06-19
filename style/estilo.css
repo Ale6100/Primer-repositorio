@@ -226,33 +226,54 @@ aside{
 
 #contacto article form{ /*inspirado en las propiedades de articuloNuevo*/
     padding: 0px 10px;
-    display: flex;                 
+    /* display: flex;                 
     flex-direction: column;       
-    justify-content: space-around;      
+    justify-content: space-around;       */
     background-color: lightgrey;
     border: solid 3px black;
     border-radius: 10px;
     height: 75vh;                 
 }
 
-#contacto article form p{
+/* #contacto article form p{
     font-weight: bold;
     text-align: center;
-}
+}*/
 
 #contacto article form *{
     font-size: 0.8rem;
 }
 
-#contacto article form label textarea{
+#contacto article form div input{
+    padding: 0.1rem;
+    width: 75%;
+}
+
+#contacto article form textarea{
+    padding: 0.1rem;
+}
+
+/* .paddinCincuentPorcent{
+    padding: 0% 25%;
+} */
+
+/* .abs{
+    justify-content: center;
+} */
+
+/* .container div div label{
+    width: 100%;
+} */
+
+.container div div textarea{
     display: block;
     width: 100%;
     height: 175px;
 }
 
-#botonesFormularioContacto{ 
+/*#botonesFormularioContacto{ 
     text-align: center;
-}
+} */
 
 footer{
     display: flex;
@@ -302,7 +323,7 @@ footer{
     }
 
     #contacto article form *{
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     footer{
