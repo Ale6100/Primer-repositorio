@@ -10,11 +10,17 @@ html{
 }
 
 /*Estilos generales - uso mobile first*/
+/* Muchas clases fueron modificadas para poder corregir los cambios que hizo el bts cuando lo vinculé*/
+
 body{
-    background-color: rgb(47, 90, 124);    
+    background-color: rgb(26, 96, 150);    
     display: flex; /*el body es un contenedor compuesto por el header, main y footer*/
     flex-direction: column; /*los elementos hijos se organizarán en una sola columna*/
 } 
+
+header{
+    margin-bottom: 10px;
+}
 
 .positionImg{
     position: relative;
@@ -25,72 +31,6 @@ body{
     position: relative;
     top: 8px;
 }
-/* header{
-    padding: 7px 0px 7px 3px;
-    margin-bottom: 10px;
-    background-color: rgb(70, 130, 180);
-    display: grid; 
-    grid-template-areas:
-    "arriba nav";
-    grid-template-rows: 1fr;
-    grid-template-columns: 9fr 1fr;
-    justify-items: center;
-    align-items: center;
-}
-
-.arriba{
-    grid-area: arriba;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.logo{
-    display: flex;
-}
-
-.logo a img{
-    height: 1.1rem;
-    position: relative;
-    top: 4px;
-}
-
-.logo p{
-    margin-left: 5px;
-    font-size: 1.1rem;
-}
-
-.arriba form {
-    margin-right: 2px;
-    width: 70%; 
-}
-
-.barraBuscador{
-    display: none; 
-}
-
-.barraBuscadorMovil{
-    font-size: 1.1rem;
-    width: 100%;
-}
-
-.botonBuscador{
-    display: none;
-}
-
-nav{
-    grid-area: nav;
-}
-
-nav figure img{
-    position: relative;
-    top: 2px; 
-    height: 1.5rem;
-}
-
-nav ul{
-    display: none;
-} */
 
 main{
     padding: 0% 1%; 
@@ -103,13 +43,15 @@ main{
 }
 
 .seccionPrincipal{
-    margin-bottom: 10px;
-    padding-bottom: 10px;
+    margin-bottom: 5px;
+    padding-bottom: 14px;
     border-bottom: 2px dashed black;
 }
 
 h1, h2, h3, h4{
     text-align: center;
+    margin: 0px;
+    color: black;
 }
 
 .articuloNuevo{/*este estilo de diseño lo uso como modelo para diseñar cajas en todas las páginas*/
@@ -125,36 +67,39 @@ h1, h2, h3, h4{
     align-items: center;
     background-color: lightgrey;
     border: 3px solid black;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .articuloNuevo h2{
     grid-area: tituloArticulo;
-    font-size: 0.86rem;
+    font-size: 1rem;
 }
 
 .articuloNuevo h2 a{
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 .articuloNuevo h3{
     grid-area: subtituloArticulo;
-    font-size: 0.86rem;
+    font-size: 0.9rem;
 }
 
 .articuloNuevo figure{
     grid-area: imagen;
+    margin: 0px;
 }
 
 .articuloNuevo figure img{
     width: 100%;
+    height: 100%;
 }
 
 .seccionPrincipal div p{
     margin-top: 10px;
     text-align: justify;
     font-weight: bold;
+    color: black;
 }
 
 .linksRecomendaciones{ /*similar a las propiedades de articuloNuevo*/
@@ -165,7 +110,7 @@ h1, h2, h3, h4{
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
-    background-color: lightgrey;
+    background-color: rgb(211, 211, 211);
     border: 3px solid black;
     border-radius: 10px;
 }
@@ -176,6 +121,8 @@ h1, h2, h3, h4{
 }
 
 .linksRecomendaciones ul{
+    margin: 0px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -188,7 +135,7 @@ h1, h2, h3, h4{
 }
 
 .linksRecomendaciones ul li h3{
-    font-size: 0.86rem;
+    font-size: 1.2rem;
 }
 
 .linksRecomendaciones ul li h3 a{
@@ -215,9 +162,17 @@ aside{
     border-radius: 10px;
 }
 
+.articuloAzar h3{
+    font-size: 1.25rem;
+}
+
 .articuloAzar h3 a{
     color: black;
     text-decoration: none;
+}
+
+.articuloAzar h4{
+    font-size: 1rem;
 }
 
 #contacto article{
@@ -226,19 +181,11 @@ aside{
 
 #contacto article form{ /*inspirado en las propiedades de articuloNuevo*/
     padding: 0px 10px;
-    /* display: flex;                 
-    flex-direction: column;       
-    justify-content: space-around;       */
     background-color: lightgrey;
     border: solid 3px black;
     border-radius: 10px;
     height: 75vh;                 
 }
-
-/* #contacto article form p{
-    font-weight: bold;
-    text-align: center;
-}*/
 
 #contacto article form *{
     font-size: 0.8rem;
@@ -253,32 +200,15 @@ aside{
     padding: 0.1rem;
 }
 
-/* .paddinCincuentPorcent{
-    padding: 0% 25%;
-} */
-
-/* .abs{
-    justify-content: center;
-} */
-
-/* .container div div label{
-    width: 100%;
-} */
-
 .container div div textarea{
     display: block;
     width: 100%;
     height: 175px;
 }
 
-/*#botonesFormularioContacto{ 
-    text-align: center;
-} */
-
 footer{
     display: flex;
     margin-top: 10px;
-    background-color: rgb(70, 130, 180);
 }
 
 @media screen and (max-width: 768px){
@@ -288,24 +218,8 @@ footer{
 }
 
 /*Formato tablet*/
-/*En este formato quiero que el tamaño de los objetos en el header y las letras se agranden un poco. También el footer cambia de forma  */
+/*En este formato quiero que el tamaño de los objetos en el header y las letras se agranden un poco. También el footer cambia de forma*/
 @media screen and (min-width: 768px){
-    /* .logo a img{
-        height: 2rem;
-    }
-
-    .logo p, .barraBuscadorMovil{
-        font-size: 2rem;
-    }
-
-    nav figure img{
-        height: 3rem;
-    } */
-
-    h1{
-        font-size: 2rem;
-    }
-
     .articuloNuevo h2{
         font-size: 1.5rem;
     }
@@ -319,7 +233,19 @@ footer{
     }
 
     .linksRecomendaciones ul li h3{
-        font-size: 1.25rem;
+        font-size: 1.5rem;
+    }
+
+    aside h2{
+        font-size: 2rem;
+    }
+
+    .articuloAzar h3{
+        font-size: 1.4rem;
+    }
+        
+    .articuloAzar h4{
+        font-size: 1.2rem;
     }
 
     #contacto article form *{
@@ -346,61 +272,13 @@ footer{
         display: inline-block; /*el texto en el footer deja de estar oculto*/
         font-weight: bold;
         color: black;
+        margin: 0px;
     }
 }
 
 /*Formato PC*/
 /*En este formato quiero que la barra de buscador se reemplace por otra barra y un botón "buscar", que el nav esté visible en todo momento, que el aside se coloque a la derecha, y que los tamaños de letra vuelvan agrandarse un poco*/
 @media screen and (min-width: 1200px){
-    /* header{
-        grid-template-columns: 4fr 6fr;
-    }
-
-    .logo a img{
-        height: 1.4rem;
-    }
-
-    .logo p{
-        font-size: 1.4rem;
-    }
-
-    .arriba form{
-        display: flex;
-        justify-content: end;
-        width: 80%; 
-    }
-
-    .barraBuscador{
-        display: inline-block; 
-        font-size: 1.4rem;
-        width: 76% 
-    }
-
-    .barraBuscadorMovil{
-        display: none;
-    }
-
-    .botonBuscador{
-        display: inline-block;
-        font-size: 1.4rem;
-        width: 20% 
-    }
-
-    nav{
-        width: 100%; 
-        font-size: 1.4rem;
-    }
-
-    nav figure{
-        display: none; 
-    }
-
-    nav ul{
-        display: flex;
-        list-style-type: none;
-        justify-content: space-around;
-    }*/
-
     #navbarNav ul li{
         padding: 0px 10px;
     }
@@ -410,7 +288,7 @@ footer{
     }
 
     .seleccion{
-        background-color: blue;
+        background-color: #0000ff;
     }
 
     .hoverr{
@@ -422,15 +300,9 @@ footer{
     }
 
     .hoverr:focus{
-        background-color: aqua;
-    }
-
-    /* nav ul li a{
-        text-align: none;
-        text-decoration: none;
+        background-color: rgb(0, 200, 200);
         color: black;
-        font-size: 1.4rem;
-    }  */
+    }
 
     main{
         grid-template-areas:  
@@ -441,7 +313,7 @@ footer{
     }
 
     .seccionPrincipal{
-        padding-right: 10px;
+        padding-right: 17px;
         margin-bottom: 0px;
         padding-bottom: 0px;
         border-bottom: 0px dashed black;
@@ -482,7 +354,7 @@ footer{
     }
 
     .linksRecomendaciones ul li h3{
-        font-size: 1.5rem;
+        font-size: 2.1rem;
     }
 
     .linksRecomendaciones ul li h3 a:hover{
