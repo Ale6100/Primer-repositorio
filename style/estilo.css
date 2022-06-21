@@ -10,8 +10,6 @@ html{
 }
 
 /*Estilos generales - uso mobile first*/
-/* Muchas clases fueron modificadas para poder corregir los cambios que hizo el bts cuando lo vinculé*/
-
 body{
     background-color: rgb(26, 96, 150);    
     display: flex; /*el body es un contenedor compuesto por el header, main y footer*/
@@ -45,13 +43,13 @@ main{
 .seccionPrincipal{
     margin-bottom: 5px;
     padding-bottom: 14px;
-    border-bottom: 2px dashed black;
+    border-bottom: 2px dashed rgb(0, 0, 0);
 }
 
 h1, h2, h3, h4{
     text-align: center;
     margin: 0px;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 .articuloNuevo{/*este estilo de diseño lo uso como modelo para diseñar cajas en todas las páginas*/
@@ -65,8 +63,8 @@ h1, h2, h3, h4{
     grid-template-columns: 2fr 1fr;
     justify-items: center;
     align-items: center;
-    background-color: lightgrey;
-    border: 3px solid black;
+    background-color: rgb(211, 211, 211);
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 15px;
 }
 
@@ -99,7 +97,7 @@ h1, h2, h3, h4{
     margin-top: 10px;
     text-align: justify;
     font-weight: bold;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 .linksRecomendaciones{ /*similar a las propiedades de articuloNuevo*/
@@ -111,7 +109,7 @@ h1, h2, h3, h4{
     justify-items: center;
     align-items: center;
     background-color: rgb(211, 211, 211);
-    border: 3px solid black;
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 10px;
 }
 
@@ -140,7 +138,7 @@ h1, h2, h3, h4{
 
 .linksRecomendaciones ul li h3 a{
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 .linksRecomendaciones figure img{
@@ -158,7 +156,7 @@ aside{
     margin-top: 1rem;
     padding: 10px;
     background-color: lightgrey;
-    border: solid 3px black;
+    border: solid 3px rgb(0, 0, 0);
     border-radius: 10px;
 }
 
@@ -167,7 +165,7 @@ aside{
 }
 
 .articuloAzar h3 a{
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
@@ -181,8 +179,8 @@ aside{
 
 #contacto article form{ /*inspirado en las propiedades de articuloNuevo*/
     padding: 0px 10px;
-    background-color: lightgrey;
-    border: solid 3px black;
+    background-color: rgb(211, 211, 211);
+    border: solid 3px rgb(0, 0, 0);
     border-radius: 10px;
     height: 75vh;                 
 }
@@ -263,7 +261,7 @@ footer{
         align-items: center;
         display: flex;
         flex-direction: column;
-        border: 2px solid black;
+        border: 2px solid rgb(0, 0, 0);
         text-decoration: none;
         border-radius: 5px;
     }
@@ -271,13 +269,13 @@ footer{
     footer div a p{
         display: inline-block; /*el texto en el footer deja de estar oculto*/
         font-weight: bold;
-        color: black;
+        color: rgb(0, 0, 0);
         margin: 0px;
     }
 }
 
 /*Formato PC*/
-/*En este formato quiero que la barra de buscador se reemplace por otra barra y un botón "buscar", que el nav esté visible en todo momento, que el aside se coloque a la derecha, y que los tamaños de letra vuelvan agrandarse un poco*/
+/*En este formato quiero que el nav esté visible en todo momento, que el aside se coloque a la derecha, y que los tamaños de letra vuelvan agrandarse un poco*/
 @media screen and (min-width: 1200px){
     #navbarNav ul li{
         padding: 0px 10px;
@@ -288,7 +286,7 @@ footer{
     }
 
     .seleccion{
-        background-color: #0000ff;
+        background-color: rgb(0, 0, 255);
     }
 
     .hoverr{
@@ -299,7 +297,7 @@ footer{
         background-color: rgb(86, 86, 139); 
     }
 
-    .hoverr:focus{
+    .hoverr:active{ /*cambié focus por active*/
         background-color: rgb(0, 200, 200);
         color: black;
     }
@@ -316,9 +314,9 @@ footer{
         padding-right: 17px;
         margin-bottom: 0px;
         padding-bottom: 0px;
-        border-bottom: 0px dashed black;
+        border-bottom: 0px dashed rgb(0, 0, 0);
         width: 100%;
-        border-right: 2px dashed black;
+        border-right: 2px dashed rgb(0, 0, 0);
     }
 
     .seccionPrincipal div p{
